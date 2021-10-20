@@ -29,7 +29,9 @@
         "sort-packages": true
     },
     "scripts": {
-        "rector-issue": "rector process src/UserAuthorization.php --ansi --dry-run"
+        "rector-ok": "rector process src/UserAuthorization.php --config=rector-ok.php --ansi --dry-run",
+        "rector-fail-unordered": "rector process src/UserAuthorization.php --config=rector-fail-unordered.php --ansi --dry-run",
+        "rector-fail-new": "rector process src/UserAuthorization.php --config=rector-fail-new.php --ansi --dry-run"
     },
     "minimum-stability": "dev",
     "prefer-stable": true
