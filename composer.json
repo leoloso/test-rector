@@ -1,0 +1,36 @@
+{
+    "name": "leoloso/test-rector",
+    "description": "Test Rector",
+    "authors": [
+        {
+            "name": "Leonardo Losoviz",
+            "email": "leo@getpop.org",
+            "homepage": "https://getpop.org"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "symfony/dependency-injection": "^5.1"
+    },
+    "require-dev": {
+        "rector/rector": "dev-main#https://github.com/rectorphp/rector/commit/212e80847c41364700e3d9e369e1aa35bdbb2c07"
+    },
+    "autoload": {
+        "psr-4": {
+            "Leoloso\\TestRector\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Leoloso\\TestRector\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "rector-issue": "rector process src/UserAuthorization.php --ansi --dry-run"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
